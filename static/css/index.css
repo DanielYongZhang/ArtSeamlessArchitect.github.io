@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .publication-authors {
-  /*color: #4286f4;*/
+  color: #4286f4;
 }
 
 .publication-video {
@@ -133,5 +133,42 @@ body {
   font-size: smaller;
 }
 
+ */
 
 
+
+ .teaser .hero-body {
+  display: flex;                    /* 使用 flexbox 布局 */
+  flex-direction: column;           /* 将标题和内容分开 */
+  align-items: center;              /* 居中对齐标题 */
+}
+
+.teaser .columns {
+  display: flex;                    /* 使用 flexbox 布局 */
+  flex-wrap: nowrap;                /* 不换行，强制所有项目在一行 */
+  justify-content: center;          /* 水平居中对齐 */
+  align-items: center;              /* 垂直居中对齐 */
+  gap: 1rem;                        /* 项目之间的间距 */
+}
+
+.teaser .column {
+  flex: 0 0 calc(25% - 1rem);       /* 每列占据 25% 宽度，减去间距 */
+  max-width: calc(25% - 1rem);      /* 最大宽度保持一致 */
+}
+
+.teaser .image {
+  width: 100%;                      /* 图片宽度为列宽 */
+  height: auto;                     /* 高度自适应 */
+}
+
+.teaser .image img,
+.teaser .image video {
+  width: 100%;                      /* 图片和视频宽度为列宽 */
+  height: auto;                     /* 高度自适应 */
+  object-fit: cover;                /* 如果需要完全填满正方形区域，使用 cover */
+  border-radius: 5px;               /* 可选：圆角边框 */
+}
+
+.teaser .columns + .columns {
+  margin-top: 1rem;                 /* 描述文字与内容之间的间距 */
+}

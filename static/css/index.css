@@ -29,3 +29,11 @@
   font-size: 0.9rem;               /* 调整文字大小 */
   color: #555;                     /* 设置文字颜色 */
 }
+
+/* 视频时间样式 */
+.video-time {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
